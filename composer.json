@@ -1,0 +1,28 @@
+{
+    "name": "<COMPOSER_NAME>",
+    "description": "OXID eShop Module <MODULE_DESCRIPTION>",
+    "type": "oxideshop-module",
+    "keywords": [],
+    "homepage": "",
+    "license": [],
+    "extra": {
+        "oxideshop": {
+            "blacklist-filter": [
+                "documentation/**/*.*",
+                "composer.json"
+            ],
+            "target-directory": "<MODULE_NAME>"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "<MODULE_NAMESPACE_QUOTED>\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "<AUTHOR_NAME>",
+            "email": "<AUTHOR_EMAIL>"
+        }
+    ]
+}
