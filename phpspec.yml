@@ -1,4 +1,5 @@
 suites:
   default:
+    src_path: "./"
     namespace: "<MODULE_NAMESPACE_QUOTED>"
     psr4_prefix: "<MODULE_NAMESPACE_QUOTED>"
