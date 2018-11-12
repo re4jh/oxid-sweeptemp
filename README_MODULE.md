@@ -1,7 +1,7 @@
 <MODULE_NAME>
 =============
 
-<MODULE_BESCHREIBUNG>
+<MODULE_DESCRIPTION>
 
 
 Testing
