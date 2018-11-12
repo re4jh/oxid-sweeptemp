@@ -3,7 +3,6 @@
     "description": "OXID eShop Module <MODULE_DESCRIPTION>",
     "type": "oxideshop-module",
     "keywords": [],
-    "homepage": "",
     "license": [],
     "extra": {
         "oxideshop": {
