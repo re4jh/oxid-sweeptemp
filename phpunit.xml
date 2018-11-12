@@ -12,7 +12,7 @@
          stopOnFailure="false"
          stopOnIncomplete="false"
          stopOnSkipped="false"
-         bootstrap="./Tests/UnitBootstrap.php"
+         bootstrap="./tests/UnitBootstrap.php"
          verbose="false">
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">

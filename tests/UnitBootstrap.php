@@ -6,8 +6,9 @@
  *
  * @see https://github.com/OXIDprojects/oxrun
  */
-
 require_once __DIR__ . '/../../../../bootstrap.php';
+
+namespace <MODULE_NAMESPACE>\Tests;
 
 if (file_exists(__DIR__ . '/additional.inc.php')) {
     include __DIR__ . '/additional.inc.php';
