@@ -6,6 +6,12 @@ VERSION=1.0.0
 default_phpunit_active=0
 default_phpspec_active=0
 
+# To active xdebug change variable `off_run_xdebug=` to `run_xdebug=`. Remove `off_`
+off_run_xdebug='php -dxdebug.idekey=debugCLI
+                -dxdebug.remote_host=host.docker.internal
+                -dxdebug.remote_enable=On
+                -dxdebug.remote_autostart=On'
+
 # Script can be controlled by environment variables (Nice for Docker)
 export PHPUNIT_ACTIVE=${PHPUNIT_ACTIVE:-$default_phpunit_active}
 export PHPSPEC_ACTIVE=${PHPSPEC_ACTIVE:-$default_phpspec_active}
@@ -13,7 +19,7 @@ export PHPSPEC_ACTIVE=${PHPSPEC_ACTIVE:-$default_phpspec_active}
 function phpunit {
     if [[ PHPUNIT_ACTIVE -eq 1 ]]; then
         printf ${yellow}${bold}"[Start PHPUnit]"${reset}"\n"
-        phpx ${vendor}/bin/phpunit ./ $*
+        $PHPCLI ${vendor}/bin/phpunit ./ $*
     else
         printf ${cyan}"[Skip PHPUnits]"${reset}"\n"
     fi
@@ -22,7 +28,7 @@ function phpunit {
 function phpspec {
     if [[ PHPSPEC_ACTIVE -eq 1 ]]; then
         printf ${yellow}${bold}"[Starte PHPspec]"${reset}"\n"
-        phpx ${vendor}/bin/phpspec $*
+        $PHPCLI ${vendor}/bin/phpspec $*
     else
         printf ${cyan}"[Skip PHPspec]"${reset}"\n"
     fi
@@ -64,6 +70,7 @@ exit 1
 
 cd $(dirname $0);
 export SCRIPT_DIR=$(pwd -P);
+export PHPCLI=${run_xdebug-php}
 
 vendor='../../../../vendor'; #v6.x-Vendor
 if [[ ! -d $vendor ]]; then
