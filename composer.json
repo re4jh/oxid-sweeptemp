@@ -1,27 +1,36 @@
 {
-    "name": "<COMPOSER_NAME>",
-    "description": "OXID eShop Module <MODULE_DESCRIPTION>",
-    "type": "oxideshop-module",
-    "keywords": [],
-    "license": [],
-    "extra": {
-        "oxideshop": {
-            "blacklist-filter": [
-                "documentation/**/*.*",
-                "composer.json"
-            ],
-            "target-directory": "<MODULE_NAME>"
-        }
-    },
-    "autoload": {
-        "psr-4": {
-            "<MODULE_NAMESPACE_QUOTED>\\": "./"
-        }
-    },
-    "authors": [
-        {
-            "name": "<AUTHOR_NAME>",
-            "email": "<AUTHOR_EMAIL>"
-        }
-    ]
+  "name": "revier/oxid-sweeptemp",
+  "description": "OXID eShop Module: Clean Template Directory",
+  "type": "oxideshop-module",
+  "keywords": [
+    "oxid",
+    "modules",
+    "eShop"
+  ],
+  "homepage": "https://www.revier.de",
+  "license": "GPL-3.0-or-later",
+  "extra": {
+    "oxideshop": {
+      "blacklist-filter": [
+        "documentation/**/*.*",
+        "composer.json"
+      ],
+      "target-directory": "revier/sweeptemp"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "revier\\sweeptemp\\": "../../../source/modules/revier/sweeptemp"
+    }
+  },
+  "require": {
+    "php": ">=5.6",
+    "oxid-esales/oxideshop-ce": "^v6.0"
+  },
+  "authors": [
+    {
+      "name": "Jonas Hess",
+      "email": "jonas.hess@revier.de"
+    }
+  ]
 }

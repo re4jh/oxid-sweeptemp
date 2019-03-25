@@ -1,32 +1,28 @@
 <?php
 /**
- * Created by oxid-module-skeleton.
- * Module: <MODULE_NAME>
- * Autor: <AUTHOR_NAME> <<AUTHOR_EMAIL>>
+ * Module: Revier Temp-Dir Sweeper
+ * Author: Jonas Hess <jonas.hess@revier.de>
  *
- * @see https://github.com/OXIDprojects/oxrun
  */
 
-$sMetadataVersion = '2.1';
+$sMetadataVersion = '0.1';
 
 $aModule = array(
-    'id'            => '<MODULE_ID>',
-    'title'         => "<MODULE_NAME>",
-    'description'   => 'OXID eShop Module <MODULE_DESCRIPTION>',
-    'thumbnail'     => '',
-    'version'       => '0.0',
-    'author'        => '<AUTHOR_NAME>',
-    'url'           => '',
-    'email'         => '<AUTHOR_EMAIL>',
+    'id'          => 're4-sweeptemp',
+    'title'       => "Revier Temp-Dir Sweeper",
+    'description' => 'OXID eShop Module: Clean Template Directory',
+    'thumbnail'   => '',
+    'version'     => '0.1',
+    'author'      => 'Jonas Hess',
+    'url'         => 'https://www.revier.de',
+    'email'       => 'jonas.hess@revier.de',
 
-    'extend'                  => [],
-    'controllers'             => [],
-    'templates'               => [],
+    'extend'      => [],
+    'controllers' => [],
+    'templates'   => [],
     'smartyPluginDirectories' => [],
-    'blocks'                  => [],
-    'events'                  => [
-        'onActivate'      => '<MODULE_NAMESPACE>\Helper\InitEvents::onModuleActivation',
-        'onDeactivate'    => '<MODULE_NAMESPACE>\Helper\InitEvents::onModuleDeactivation',
-    ],
-    'settings'                => [],
+    'blocks' => array(
+        array('template' => 'header.tpl', 'block' => 'admin_header_links', 'file' => 'backend_admin_headitem_sweep.tpl'),
+    ),
+    'settings' => [],
 );
