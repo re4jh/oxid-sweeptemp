@@ -4,7 +4,7 @@
 	Licence: GPLv3
 */
 
-$tmp_folder = 'tmp';
+$tmp_folder = '../../../../../tmp';
 $tmp_garbage = Array();
 $tmp_smarty = Array();
 
