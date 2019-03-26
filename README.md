@@ -14,6 +14,9 @@ License
 
 
 Credits
-------
+-------
 
 * [Jonas Hess](https://github.com/re4jh)
+* Thanks for the boilerplates!
+** https://github.com/OXIDprojects/oxid-module-skeleton
+** https://github.com/kyoya-de/simple-clear-temp
