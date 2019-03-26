@@ -17,7 +17,9 @@ $aModule = array(
     'url'         => 'https://www.revier.de',
     'email'       => 'jonas.hess@revier.de',
 
-    'extend'      => [],
+    'extend' => [
+        'navigation' => "revier/sweeptemp/Controller/Admin/sweepTemp",
+    ],
     'controllers' => [],
     'templates'   => [],
     'smartyPluginDirectories' => [],
