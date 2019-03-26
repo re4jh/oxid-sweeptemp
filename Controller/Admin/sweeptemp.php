@@ -8,9 +8,7 @@ $tmp_folder = '../../../../../tmp';
 $tmp_garbage = Array();
 $tmp_smarty = Array();
 
-
-if(!isset($_COOKIE['admin_sid']))
-{
+if (!isset($_COOKIE['admin_sid'])) {
     die('no admin session found');
 }
 
@@ -50,7 +48,6 @@ foreach ($tmp_garbage as $regex) {
 $smartyfiles = scandir($tmp_folder . '/smarty/');
 $smartycount = 0;
 
-
 foreach ($smartyfiles as $file) {
     if ($file != '.' && $file != '..') {
         unlink($tmp_folder . '/smarty/' . $file);
@@ -58,6 +55,9 @@ foreach ($smartyfiles as $file) {
     }
 }
 
-echo $count . ' Temp-File(s) deleted!';
-echo ' // ' . $smartycount . ' Smarty-Tempfile(s) deleted!';
+$sOut = '<html><body><pre>' . "\n";
+$sOut .= $count . ' Temp-File(s) deleted!' . "\n";
+$sOut .= $smartycount . ' Smarty-Tempfile(s) deleted!</pre>' . "\n";
+$sOut .= '</body></html>';
 
+echo $sOut;
