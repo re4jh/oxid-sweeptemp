@@ -8,6 +8,12 @@ $tmp_folder = '../../../../../tmp';
 $tmp_garbage = Array();
 $tmp_smarty = Array();
 
+
+if(!isset($_COOKIE['admin_sid']))
+{
+    die('no admin session found');
+}
+
 //Define the Files to sweep by Regex
 $tmp_garbage[] = '^[0-9a-z\^\%A-Z_]*oxforgotpw[0-9a-z\^\%A-Z_]*\.php$';
 $tmp_garbage[] = '^[0-9a-z\^%A-Z_]*oxcontent[0-9]*oxbaseshop\.php$';
