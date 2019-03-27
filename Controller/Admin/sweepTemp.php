@@ -4,7 +4,8 @@ class sweepTemp extends sweepTemp_parent
 {
     public function render()
     {
-        return parent::render();
+        $renderResult = parent::render();
+        return ('header.tpl' === $renderResult) ? 're4header.tpl' : $renderResult;
     }
 
     public function clearTemp()

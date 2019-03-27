@@ -21,10 +21,12 @@ $aModule = array(
         'navigation' => "revier/sweeptemp/Controller/Admin/sweepTemp",
     ],
     'controllers' => [],
-    'templates'   => [],
+    'templates' => [
+        're4header.tpl' => "revier/sweeptemp/views/admin/tpl/re4header.tpl",
+    ],
     'smartyPluginDirectories' => [],
     'blocks' => array(
-        array('template' => 'header.tpl', 'block' => 'admin_header_links', 'file' => 'backend_admin_headitem_sweep.tpl'),
+        array('template' => 're4header.tpl', 'block' => 'admin_header_links', 'file' => 'backend_admin_headitem_sweep.tpl'),
     ),
     'settings' => [],
 );
