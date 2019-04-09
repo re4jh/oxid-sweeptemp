@@ -19,6 +19,6 @@ class sweepTemp extends sweepTemp_parent
             }
             unlink($entry->getRealPath());
         }
-        echo '&nbsp;<span style="color: #7FFF00">✔</span><span></span> <sup>' . date("H:i:s") . '</sup>';
+        $this->addTplParam("lastcachedeletion", date("H:i:s"));
     }
 }
